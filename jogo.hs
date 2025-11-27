@@ -54,9 +54,9 @@ modoDeusEscolher Agua = Papel
 
 -- modo tonto
 modoTontoEscolher :: Jogada -> Jogada
-modoTontoEscolher Pedra = Papel
-modoTontoEscolher Papel = Fogo
-modoTontoEscolher Tesoura = Pedra
+modoTontoEscolher Pedra = Tesoura
+modoTontoEscolher Papel = Pedra
+modoTontoEscolher Tesoura = Papel
 modoTontoEscolher Fogo = Pedra
 modoTontoEscolher Agua = Fogo
 
@@ -85,9 +85,9 @@ exibirMenuModo = do
   putStrLn "\n========================================="
   putStrLn "  ESCOLHA O MODO DE JOGO"
   putStrLn "========================================="
-  putStrLn "  1 - Modo Normal (jogo joga aleatoriamente)"
-  putStrLn "  2 - Modo Deus (jogo sempre ganha)"
-  putStrLn "  3 - Modo Tonto (jogo sempre perde)"
+  putStrLn "  1 - Modo Normal"
+  putStrLn "  2 - Modo Deus"
+  putStrLn "  3 - Modo Tonto"
   putStr "\nSua escolha: "
   hFlush stdout
   entrada <- getLine
